@@ -21,7 +21,7 @@ with open('vocab.json', 'r') as f:
     word_to_index = vocab_data['word_to_index']
     index_to_word = vocab_data['index_to_word']
     # index_to_word 딕셔너리의 키를 정수형으로 변환
-    index_to_word = {int(k): v for k, v in index_to_word.items()}
+    index_to_word = {int(k): v for k, v in index_to_word.items() if k.isdigit()}
 
 # 모델 로드
 interpreter = tflite.Interpreter(model_path=model_path)
