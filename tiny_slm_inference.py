@@ -17,7 +17,7 @@ input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
 # 초기 컨텍스트 단어 선택
-context_word = "오늘"  # 시작 단어
+context_word = "today"  # 시작 단어
 context_index = word_to_index.get(context_word)
 
 if context_index is None:
